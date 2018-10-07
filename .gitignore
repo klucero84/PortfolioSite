@@ -12,7 +12,7 @@
 *.code-workspace
 .vscode/
 PortfolioSiteAPI/.vs/
-
+PortfolioSiteAPI/Properties/
 PortfolioSiteAPI/obj/
 PortfolioSiteAPI/bin/
 PortfolioSiteAPI/wwwroot/
