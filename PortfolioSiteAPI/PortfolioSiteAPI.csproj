@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\3rdpartylicenses.txt" />
+    <None Include="wwwroot\fa-brands-400.48461ea4e797c9774dab.woff2" />
+    <None Include="wwwroot\fa-brands-400.7b464e274bc331f9a765.woff" />
+    <None Include="wwwroot\fa-brands-400.947b9537bc0fecc8130d.ttf" />
+    <None Include="wwwroot\fa-brands-400.9b6c8da3c489424e2b3e.eot" />
+    <None Include="wwwroot\fa-brands-400.b5472631dbace30d5493.svg" />
+    <None Include="wwwroot\fa-regular-400.381af09a1366b6c2ae65.woff" />
+    <None Include="wwwroot\fa-regular-400.73fe7f1effbf382f4998.ttf" />
+    <None Include="wwwroot\fa-regular-400.7422060ca379ee9939d3.eot" />
+    <None Include="wwwroot\fa-regular-400.949a2b066ec37f5a3847.woff2" />
+    <None Include="wwwroot\fa-regular-400.b5a61b229c9c92a6ac21.svg" />
+    <None Include="wwwroot\fa-solid-900.0079a0ab6bec4da7d6e1.ttf" />
+    <None Include="wwwroot\fa-solid-900.14a08198ec7d1eb96d51.woff2" />
+    <None Include="wwwroot\fa-solid-900.38508b2e7fac045869a8.svg" />
+    <None Include="wwwroot\fa-solid-900.70e65a7d34902f2c3508.eot" />
+    <None Include="wwwroot\fa-solid-900.815694de1120d6c1e9d1.woff" />
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\header.fb7e411aaf7b47c5cb3e.jpg" />
+    <None Include="wwwroot\img\header.jpg" />
+    <None Include="wwwroot\img\portfolio\thumbnails\catalyte\Catalytelogo650x350-1.png" />
+    <None Include="wwwroot\img\portfolio\thumbnails\ca\ca-logo.png" />
+    <None Include="wwwroot\img\portfolio\thumbnails\chess\chess-2.jpg" />
+    <None Include="wwwroot\img\portfolio\thumbnails\dating\click-heart-1.jpg" />
+    <None Include="wwwroot\img\portfolio\thumbnails\hc\hc-logo.jpg" />
+    <None Include="wwwroot\img\portfolio\thumbnails\hw\HelloWallet-Logo-650-350.png" />
+    <None Include="wwwroot\img\portfolio\thumbnails\sbd\logo_1.png" />
+    <None Include="wwwroot\img\portfolio\thumbnails\tbg\logo-print-1.jpg" />
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\main.1b90c5e773431e6c2885.js" />
+    <None Include="wwwroot\polyfills.2f4a59095805af02bd79.js" />
+    <None Include="wwwroot\runtime.a66f828dca56eeb90e02.js" />
+    <None Include="wwwroot\scripts.71e1382f6e884fe9fb91.js" />
+    <None Include="wwwroot\styles.f9a890739be11eed383f.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+</Project>
