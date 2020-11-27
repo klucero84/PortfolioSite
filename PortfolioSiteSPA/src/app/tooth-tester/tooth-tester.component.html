@@ -1,0 +1,133 @@
+<br><br><br><br><br>
+<div class='container mt-5 mb-5'>
+  <div class='row m-2'>
+    <div class='col-12'>
+      <select id="iso"  name="iso"  [(ngModel)]="selectedMode" (change)="changeMode()">  
+        <option selected value="std">Standard Numbering</option>  
+        <option value="iso">Iso Numbering</option>  
+      </select>  
+    </div>
+  
+  </div>
+  <div class='row m-4 border border-primary rounded p-3'>
+    <div class="col-6"> 
+      
+      <div class ='row mb-2'>
+        <button type="button" class="btn btn-primary btn-sm mr-1" (click)="resetToothNumberTest()">Permanent Tooth Number Test</button> 
+      </div>
+      <div class ='row mb-2'>
+        <label>Tooth Number:{{selectedToothNumber}}</label>
+      </div>
+      <div class ='row mb-2'>
+        <select id="top"  name="top" [(ngModel)]="selectedTop" >  
+          <option  *ngFor="let name of top"> 
+            {{name}}  
+          </option>  
+        </select>
+      </div>
+      <div class ='row mb-2'>
+        <select id="side"  name="side" [(ngModel)]="selectedSide">  
+          <option  *ngFor="let name of side"> 
+            {{name}}  
+          </option>  
+        </select>
+      </div>
+      <div class ='row mb-2'>
+        <select id="tooth"  name="tooth" [(ngModel)]="selectedTooth">  
+          <option  *ngFor="let name of tooth"> 
+            {{name}}  
+          </option>  
+        </select>
+      </div>
+      <div class='row mb-2'>
+        <button type="button" class="btn btn-warning btn-sm" (click)="checkToothNumberTest()">Check</button> 
+        <button type="button" class="btn btn-success btn-sm" (click)="solveToothNumberTest()">Solve</button> 
+      </div>
+      <div class='row mb-2'>
+        Answer:{{outputToothNumber}}
+      </div>
+    </div>  
+    <div class="col-6"> 
+      
+      <div class ='row mb-2'>
+        <button type="button" class="btn btn-primary btn-sm mr-1" (click)="resetToothNameTest()">Permanent Tooth Name Test</button> 
+      </div>
+      <div class ='row mb-2'>
+        <label>Tooth Name: {{selectedToothName}}</label>
+      </div>
+      <div class ='row mb-2'>
+        <input [(ngModel)]="toothNumberInput">
+        
+      </div>
+      
+      <div class='row mb-2'>
+        <button type="button" class="btn btn-warning btn-sm" (click)="checkToothNameTest()">Check</button> 
+        <button type="button" class="btn btn-success btn-sm" (click)="solveToothNameTest()">Solve</button> 
+      </div>
+      <div class='row mb-2'>
+        Answer:{{outputToothName}}
+      </div>
+    </div>  
+  </div>
+  <div class='row m-4  border border-info rounded p-3'>
+    <div class="col-6"> 
+      
+      <div class ='row mb-2'>
+        <button type="button" class="btn btn-info btn-sm mr-1" (click)="resetPrimaryToothNumberTest()">Primary Tooth Number Test</button> 
+      </div>
+      <div class ='row mb-2'>
+        <label>Primary Tooth Number: {{selectedPrimaryToothNumber}}</label>
+      </div>
+      <div class ='row mb-2'>
+        <select id="top"  name="top" [(ngModel)]="selectedPrimaryTop">  
+          <option  *ngFor="let name of top"> 
+            {{name}}  
+          </option>  
+        </select>
+      </div>
+      <div class ='row mb-2'>
+        <select id="side"  name="side" [(ngModel)]="selectedPrimarySide">  
+          <option  *ngFor="let name of side"> 
+            {{name}}  
+          </option>  
+        </select>
+      </div>
+      <div class ='row mb-2'>
+        <select id="tooth"  name="tooth" [(ngModel)]="selectedPrimaryTooth">  
+          <option  *ngFor="let name of babytooth"> 
+            {{name}}  
+          </option>  
+        </select>
+      </div>
+      <div class='row mb-2'>
+        <button type="button" class="btn btn-warning btn-sm" (click)="checkPrimaryToothNumberTest()">Check</button> 
+        <button type="button" class="btn btn-success btn-sm" (click)="solvePrimaryToothNumberTest()">Solve</button> 
+      </div>
+      <div class='row mb-2'>
+        Answer:{{outputPrimaryToothNumber}}
+      </div>
+    </div>  
+    <div class="col-6"> 
+      
+      <div class ='row mb-2'>
+        <button type="button" class="btn btn-info btn-sm mr-1" (click)="resetPrimaryToothNameTest()">Primary Tooth Name Test</button> 
+      </div>
+      <div class ='row mb-2'>
+        <label>Primary Tooth Name: {{selectedPrimaryToothName}}</label>
+      </div>
+      <div class ='row mb-2'>
+        <input [(ngModel)]="primaryToothNumberInput">
+        
+      </div>
+      
+      <div class='row mb-2'>
+        <button type="button" class="btn btn-warning btn-sm" (click)="checkPrimaryToothNameTest()">Check</button> 
+        <button type="button" class="btn btn-success btn-sm" (click)="solvePrimaryToothNameTest()">Solve</button> 
+      </div>
+      <div class='row mb-2'>
+        Answer:{{outputPrimaryToothName}}
+      </div>
+    </div>  
+  </div>
+</div>
+<br><br><br><br><br>
