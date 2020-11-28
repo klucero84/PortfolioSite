@@ -110,26 +110,26 @@ export class ToothTesterComponent implements OnInit {
   }
 
   changeMode() {
-    console.log('mode changed');
+    // console.log('mode changed');
     this.resetToothNumberTest();
     this.resetToothNameTest();
     this.resetPrimaryToothNumberTest();
     this.resetPrimaryToothNameTest();
-    this.outputToothNumber = '';
-    this.outputToothName = '';
-    this.outputPrimaryToothNumber = '';
-    this.outputPrimaryToothName = '';
   }
 
   resetToothNumberTest() {
-    console.log('number reset');
+    // console.log('number reset');
     const r = this.getRandomInt(1, this.data.length);
     const text = this.data[r][this.selectedMode];
     this.selectedToothNumber = text;
+    this.outputToothNumber = '';
+    this.selectedTop = '';
+    this.selectedSide = '';
+    this.selectedTooth = '';
   }
   checkToothNumberTest() {
-    console.log('number checked');
-    console.log( this.selectedTop + ' ' + this.selectedSide + ' ' + this.selectedTooth);
+    // console.log('number checked');
+    // console.log( this.selectedTop + ' ' + this.selectedSide + ' ' + this.selectedTooth);
     const items = this.data.filter(item => item[this.selectedMode] === this.selectedToothNumber);
     if (items.length === 1) {
       const t = items[0]['name'].toLowerCase() ==
@@ -138,7 +138,7 @@ export class ToothTesterComponent implements OnInit {
     }
   }
   solveToothNumberTest() {
-    console.log('number solved');
+    // console.log('number solved');
     const items = this.data.filter(item => item[this.selectedMode] === this.selectedToothNumber);
     if (items.length === 1) {
       const text = items[0]['name'];
@@ -147,14 +147,16 @@ export class ToothTesterComponent implements OnInit {
   }
 
   resetToothNameTest() {
-    console.log('name reset');
+    // console.log('name reset');
     const r = this.getRandomInt(1, this.data.length);
     const text = this.data[r]['name'];
     this.selectedToothName = text;
+    this.outputToothName = '';
+    this.toothNumberInput = '';
   }
   checkToothNameTest() {
-    console.log('name checked');
-    console.log(this.toothNumberInput);
+    // console.log('name checked');
+    // console.log(this.toothNumberInput);
     const items = this.data.filter(item => item.name === this.selectedToothName);
     if (items.length === 1) {
       if (this.selectedMode === 'iso'){
@@ -171,7 +173,7 @@ export class ToothTesterComponent implements OnInit {
 
   }
   solveToothNameTest() {
-    console.log('name solved');
+    // console.log('name solved');
     const items = this.data.filter(item => item.name === this.selectedToothName);
     if (items.length === 1) {
       const text = items[0][this.selectedMode];
@@ -180,14 +182,18 @@ export class ToothTesterComponent implements OnInit {
   }
 
   resetPrimaryToothNumberTest() {
-    console.log('p number reset');
+    // console.log('p number reset');
     const r = this.getRandomInt(1, this.babies.length);
     const text = this.babies[r][this.selectedMode];
     this.selectedPrimaryToothNumber = text;
+    this.outputPrimaryToothNumber = '';
+    this.selectedPrimaryTop = '';
+    this.selectedPrimarySide = '';
+    this.selectedPrimaryTooth = '';
   }
   checkPrimaryToothNumberTest() {
-    console.log('p number checked');
-    console.log( this.selectedPrimaryTop + ' ' + this.selectedPrimarySide + ' ' + this.selectedPrimaryTooth);
+    // console.log('p number checked');
+    // console.log( this.selectedPrimaryTop + ' ' + this.selectedPrimarySide + ' ' + this.selectedPrimaryTooth);
     const items = this.babies.filter(item => item[this.selectedMode] === this.selectedPrimaryToothNumber);
     if (items.length === 1) {
       const t = items[0]['name'].toLowerCase() ==
@@ -196,7 +202,7 @@ export class ToothTesterComponent implements OnInit {
     }
   }
   solvePrimaryToothNumberTest() {
-    console.log('number solved');
+    // console.log('number solved');
     const items = this.babies.filter(item => item[this.selectedMode] === this.selectedPrimaryToothNumber);
     if (items.length === 1) {
       const text = items[0]['name'];
@@ -205,14 +211,16 @@ export class ToothTesterComponent implements OnInit {
   }
 
   resetPrimaryToothNameTest() {
-    console.log('p name reset');
+    // console.log('p name reset');
     const r = this.getRandomInt(1, this.babies.length);
     const text = this.babies[r]['name'];
     this.selectedPrimaryToothName = text;
+    this.outputPrimaryToothName = '';
+    this.primaryToothNumberInput = '';
   }
   checkPrimaryToothNameTest() {
-    console.log('p name checked');
-    console.log(this.primaryToothNumberInput);
+    // console.log('p name checked');
+    // console.log(this.primaryToothNumberInput);
     const items = this.babies.filter(item => item.name === this.selectedPrimaryToothName);
     if (items.length === 1 && this.primaryToothNumberInput !== undefined) {
       if (this.selectedMode === 'iso'){
@@ -228,7 +236,7 @@ export class ToothTesterComponent implements OnInit {
 
   }
   solvePrimaryToothNameTest() {
-    console.log('p name solved');
+    // console.log('p name solved');
     const items = this.babies.filter(item => item.name === this.selectedPrimaryToothName);
     if (items.length === 1) {
       const text = items[0][this.selectedMode];
